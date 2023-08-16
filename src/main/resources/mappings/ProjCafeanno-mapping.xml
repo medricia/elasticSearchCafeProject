@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="ProjCafeAnnoDTO">
+	<insert id="insertAnno">
+		<![CDATA[
+		insert into ProjCafeAnno values((select nvl(max(ANNO_ID), 0)+1 from ProjCafeAnno), #{ANNO_TITLE}, #{ANNO_CONTEXT},#{ANNO_IMAGE},Sysdate)
+		]]>
+	</insert>
+	
+	<update id="UpdateAnno">
+		<![CDATA[
+		update ProjCafeAnno set ANNO_TITLE = #{ANNO_TITLE}, ANNO_IMAGE = #{ANNO_IMAGE}, ANNO_CONTEXT = #{ANNO_CONTEXT} where ANNO_ID = #{ANNO_ID}
+		]]>
+	</update>
+	<select id="getAnnoListALL" resultType="anno">
+		<![CDATA[
+		SELECT * FROM ProjCafeAnno
+		]]>
+	</select>
+	
+	<select id="getAnnoList" resultType="anno">
+		<![CDATA[
+		SELECT * FROM ((select rownum rnum, ANNO_ID, ANNO_TITLE, ANNO_DATE from (select * from ProjCafeAnno ORDER BY ANNO_ID desc))) WHERE rnum >= #{STARTPAGE} and rnum <= #{ENDPAGE}
+		]]>
+	</select>	
+	
+	<select id="getAnno" resultType="anno">
+		<![CDATA[
+		SELECT * FROM ProjCafeAnno where anno_ID = #{ANNO_ID}
+		]]>
+	</select>	
+	
+	<delete id="deleteAnno">
+		<![CDATA[
+		delete from ProjCafeAnno where anno_ID = #{ANNO_ID}
+		]]>
+	</delete>
+	
+</mapper>

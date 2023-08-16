@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CafeMenuDAO">
+
+	<insert id="insertCafeMenu">
+	<![CDATA[	
+		insert into ProjCafeMenu(cafe_Menu_ID, cafe_ID, cafe_Menu, cafe_Menu_Price) 
+		values((select nvl(max(cafe_Menu_ID), 0)+1 from ProjCafeMenu),#{cafe_ID},#{cafe_Menu},#{cafe_Menu_Price})
+	]]>
+	</insert>
+ 
+	<select id="getCafeMenuList" resultType="menu">
+		<![CDATA[
+		select * from ProjCafeMenu where cafe_ID = #{cafe_ID} order by cafe_Menu_ID
+		]]>
+	</select>
+
+
+ 	<update id="updateCafeMenu">
+ 	<![CDATA[
+ 		update ProjCafeMenu set cafe_Menu = #{cafe_Menu}, cafe_Menu_Price = #{cafe_Menu_Price} where cafe_Menu_ID = #{cafe_Menu_ID}
+ 	]]>
+ 	</update>
+ 
+ 	<delete id="deleteCafeMenu">
+ 	<![CDATA[
+ 		delete from ProjCafeMenu where cafe_Menu_ID = #{cafe_Menu_ID}
+ 	]]>
+ 	</delete>
+ 
+</mapper>
+
+<!-- sql -->

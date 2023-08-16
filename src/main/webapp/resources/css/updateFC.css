@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#list{
+  font-family: 'NanumSquareNeo-Variable';
+  width:1000px;
+  margin:0 auto;
+}
+#list h3{
+  font-size:30px;
+  margin-left:10px;
+}
+#thisiscenter{
+   margin-top:20px;
+}
+#checkCLN{
+   padding:10px 10px;
+  font-size:18px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  margin-left:5px;
+}
+#changename{
+  display:inline-block;
+  font-size:30px;
+  font-weight:bold;
+  margin:0 20px;
+}
+#GTCname{
+  border:1px solid #ccc;
+  border-radius:4px;
+  padding:7px 15px;
+  font-size:20px;
+  width:280px;
+}
+#list input[type=submit]{
+  font-family: 'NanumSquareNeo-Variable';
+  padding: 9px 20px;
+  margin-left:20px;
+  font-size:18px;
+  background-color:#ece3da;
+  border:1px solid #f5f3f3;
+  color:#000;
+  border-radius:5px;
+}
+#list input[type=submit]:active{
+  background-color:#aaa;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="ProjCafeGiftycornCafeListDTO">
+	<insert id="insertGiftycornCafeList">
+		<![CDATA[
+		insert into ProjGiftycornCafeList values ((select nvl(max(GiftyCorn_CLN), 0)+10 from ProjGiftycornCafeList), #{GIFTYCORN_CAFE_NAME})
+		]]>
+	</insert>
+	
+	<update id="updateGiftycornCafeList">
+		<![CDATA[
+		update ProjGiftycornCafeList set GIFTYCORN_CAFE_NAME = #{GIFTYCORN_CAFE_NAME} where GIFTYCORN_CLN = #{GIFTYCORN_CLN}
+		]]>
+	</update>
+	
+	<select id="getGiftycornCafeList" resultType="giftycornCafeList">
+		<![CDATA[
+		select * from ProjGiftycornCafeList order by GIFTYCORN_CLN
+		]]>
+	</select>	
+	
+	
+	
+	<select id="getGiftycornCafe" resultType="giftycornCafeList">
+		<![CDATA[
+		select * from ProjGiftycornCafeList where GIFTYCORN_CLN = #{GIFTYCORN_CLN}
+		]]>
+	</select>	
+	
+	<delete id="deleteGiftycornCafeList">
+		<![CDATA[
+		delete from ProjGiftycornCafeList where GIFTYCORN_CLN = #{GIFTYCORN_CLN}
+		]]>
+	</delete>
+	
+</mapper>

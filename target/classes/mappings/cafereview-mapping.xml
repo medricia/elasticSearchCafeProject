@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CafeReviewDAO">
+ 
+	<insert id="insertCafeReview">
+		<![CDATA[
+		insert into ProjCafeReviewBoard(cafe_Review_Number, cafe_ID, MEMBER_ID, cafe_Review_Title,cafe_Review_Content) 
+		values((select nvl(max(cafe_Review_Number), 0)+1 from ProjCafeReviewBoard), #{cafe_ID},	#{MEMBER_ID},#{cafe_Review_Title},#{cafe_Review_Content})
+		]]>
+	</insert>
+	<insert id="insertReviewImage">
+		<![CDATA[
+		insert into ProjCafeRImage values((select Max(cafe_Review_Number) from ProjCafeReviewBoard), #{REVIEW_IMAGE})
+		]]>
+	</insert>
+	
+	<update id="UpdateReviewTitle">
+		<![CDATA[
+		update ProjCafeReviewBoard set cafe_Review_Title = #{cafe_Review_Title}, cafe_Review_Content = #{cafe_Review_Content} where cafe_Review_Number = #{cafe_Review_Number}
+		]]>
+	</update>
+	
+		<delete id="UpdateReviewImageD">
+			<![CDATA[
+			delete from projcaferimage where cafe_Review_Number = #{cafe_Review_Number}
+			]]>
+		</delete>
+		<insert id="UpdateReviewImage">
+			<![CDATA[
+			insert into ProjCafeRImage values(#{cafe_Review_Number}, #{REVIEW_IMAGE})
+			]]>
+		</insert>
+	
+	
+	<select id="getCafeReviewList" resultType="review">
+		<![CDATA[
+		SELECT * FROM ProjCafeReviewBoard
+		]]>
+	</select>
+	
+	<!-- 0504추가 -->
+	<select id="getCafeReviewCAFEID" resultType="review">
+		<![CDATA[
+		SELECT * FROM ProjCafeReviewBoard where Cafe_id = #{cafe_ID}
+		]]>
+	</select>
+	
+	<select id="getCafeReviewMemberID" resultType="review">
+ 	<![CDATA[
+ 		SELECT * FROM ProjCafeReviewBoard where MEMBER_ID = #{MEMBER_ID}
+ 	]]>
+ 	</select>
+ 	
+ 	<select id="getCafeReview" resultType="review" parameterType="int">
+ 	<![CDATA[
+ 		SELECT * FROM ProjCafeReviewBoard where cafe_Review_Number=#{cafe_Review_Number}
+ 	]]>
+ 	</select>
+ 	
+ 		<select id="getCafeImage" resultType="review" parameterType="int">
+ 	<![CDATA[
+ 		SELECT * FROM ProjCafeRImage where cafe_Review_Number=#{cafe_Review_Number}
+ 	]]>
+ 	</select>
+ 	
+ 	<delete id="deleteCafeImage">
+ 	<![CDATA[
+		delete from ProjCafeRImage where cafe_Review_Number = #{cafe_Review_Number}
+ 	]]>
+ 	</delete>	
+ 	
+ 	<delete id="deleteCafeReview">
+ 	<![CDATA[
+ 		delete from ProjCafeReviewBoard where cafe_Review_Number = #{cafe_Review_Number}
+ 	]]>
+ 	</delete>
+ 	
+</mapper>
+
+<!-- sql -->

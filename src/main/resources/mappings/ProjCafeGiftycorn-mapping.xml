@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="ProjCafeGiftycornDTO">
+	<insert id="insertGiftycorn">
+		<![CDATA[
+		insert into projgifticorn(MEMBER_ID, GiftyCorn_ID, GIFTYCORN_CLN, GIFTYCORN_IMAGE_LOCATION, GIFTYCORN_START_DATE, GIFTYCORN_LIMIT_DATE, GIFTYCORN_MEMO) values(#{MEMBER_ID},(select nvl(max(GiftyCorn_ID), 0)+1 from projgifticorn),#{GIFTYCORN_CLN},#{GIFTYCORN_IMAGE_LOCATION},TO_DATE(#{GIFTYCORN_START_DATE},'YYYY,MM,DD'),TO_DATE(#{GIFTYCORN_LIMIT_DATE},'YYYY,MM,DD'),#{GIFTYCORN_MEMO})
+	]]>
+	</insert>
+	
+	<update id="updateGiftycorn">
+		<![CDATA[
+		update projgifticorn set GiftyCorn_Memo = #{GIFTYCORN_MEMO}, GiftyCorn_Limit_Date = TO_DATE(#{GIFTYCORN_LIMIT_DATE},'YYYY,MM,DD') where GiftyCorn_ID = #{GIFTYCORN_ID}
+		]]>
+	</update>
+	
+	<select id="getGiftycornList" resultType="giftycorn">
+		<![CDATA[
+		select * from projgifticorn order by GIFTYCORN_ID
+		]]>
+	</select>
+		<select id="getGiftycornCafeNotDup" resultType="giftycorn">
+		<![CDATA[
+	select giftycorn_cln from projGifticorn where member_id = #{MEMBER_ID} GROUP by giftycorn_cln
+		]]>
+	</select>	
+		
+	<select id="getGiftycornMEMBERList" resultType="giftycorn">
+		<![CDATA[
+		SELECT member_id, giftycorn_id, giftycorn_cln, giftycorn_image_location, TO_CHAR(giftycorn_start_date, 'YYYY-MM-DD') AS giftycorn_start_date, TO_CHAR(giftycorn_limit_date, 'YYYY-MM-DD') AS giftycorn_limit_date, giftycorn_memo
+		FROM projgifticorn
+		where MEMBER_ID = #{MEMBER_ID} order by GIFTYCORN_ID
+		]]>
+	</select>	
+	<select id="getGiftycorn" resultType="giftycorn">
+		<![CDATA[
+		select * from projgifticorn where GIFTYCORN_ID = #{GIFTYCORN_ID}
+		]]>
+	</select>	
+	
+	<delete id="deleteGiftycorn">
+		<![CDATA[
+		delete from projgifticorn where GiftyCorn_ID = #{GIFTYCORN_ID}
+		]]>
+	</delete>
+	
+</mapper>

@@ -1,0 +1,263 @@
+@charset "UTF-8";
+@charset "UTF-8";
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#getoneGiftycorn{
+  display:none;
+  top:0px;
+  width:100%;
+  height:120%;
+  background-color:rgba(72,24,16,0.05);
+    position: absolute;
+}
+#GetMember_ID{
+    font-family: 'NanumSquareNeo-Variable';
+  font-size:26px;
+  font-weight:bold;
+  display:inline-block;
+  margin-bottom:30px;
+  margin-top:10px;
+  color:#481838;
+  
+}
+#creategiftycorn{
+   position: absolute;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align:center;
+  background-color:#ECE6E0;
+  padding: 40px;
+  max-width:600px;
+  margin:auto;
+  border-radius:5px;
+  box-shadow:0 4px 10px 4px rgba(0,0,0,0.2);
+}
+.givespace{
+  margin-bottom:30px;
+}
+#selectcontainer{
+      font-family: 'NanumSquareNeo-Variable';
+  position: relative;
+  float: left;
+  min-width: 300px;
+  width: 300px;
+  font-weight: 300;
+  background-color: #fff;
+  box-shadow: 1px 2px 10px -2px rgba(0,0,0,0.3);
+  border-radius: 3px;
+  transition: all 375ms ease-in-out;
+}
+#seletecafeG{
+  display:block;
+  margin:0 auto;
+  padding:15px 20px;
+  background:rgba(255,255,255,0.25);
+  color:#000;
+  font-size:20px;
+  width:70%;
+  text-align:center;
+  cursor:pointer;
+  border:1px solid #999;
+  border-radius:5px;
+}
+#GiftMemo{
+  width:350px;
+  border: none;
+    resize: none;
+}
+.updateGiftyIMG{
+  width:300px;
+  height: 300px;
+}
+.content{
+    outline: 2px dashed #ffc107 ;
+    outline-offset:-10px;  
+    text-align: center;
+    transition: all .15s ease-in-out;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.3);
+    width: 300px;
+    height: 300px;
+    margin:0 auto;
+    background-color: white;
+}
+#uploadgiftycornIMG{
+  display:none;
+}
+#name{
+  display:block;
+  position:static;
+  margin:0 auto;
+  width:430px;
+}
+#selectCafe {
+  width: 300px;
+  display:block;
+  position:static;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgb(204, 204, 204);
+  transition: all .5s ease;
+  font-size: 14px;
+  color: #2d2220;
+  height: 100%;
+  text-align: left
+}
+#selectCafe .select {
+    cursor: pointer;
+    display: block;
+    padding: 10px
+}
+#selectCafe .select span{
+    cursor: pointer;
+    display: block;
+  padding-left:15px;
+  font-size:20px;
+}
+#selectCafe .select > i {
+    font-size: 15px;
+    color: #7c6f62;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    float: right;
+    line-height: 20px
+}
+#selectCafe:hover {
+    box-shadow: 0 0 4px rgb(204, 204, 204)
+}
+#selectCafe:active {
+    background-color: #f8f8f8
+}
+#selectCafe.active:hover,
+#selectCafe.active {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
+    border-radius: 2px 2px 0 0;
+    background-color: #f8f8f8
+}
+#selectCafe.active .select > i {
+    transform: rotate(-90deg)
+}
+#selectCafe .dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    left: 0;
+    margin-top: 1px;
+    box-shadow: 0 1px 2px rgb(204, 204, 204);
+    border-radius: 0 1px 2px 2px;
+    overflow: hidden;
+    display: none;
+    max-height: 144px;
+    overflow-y: auto;
+    z-index: 9
+}
+#selectCafe .dropdown-menu li {
+    padding: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer
+} 
+#selectCafe .dropdown-menu {
+    padding: 0;
+    list-style: none
+}
+#selectCafe .dropdown-menu li:hover {
+    background-color: #f2f2f2
+}
+#selectCafe .dropdown-menu li:active {
+    background-color: #e2e2e2
+}
+#Gtime{
+  font-family: 'NanumSquareNeo-Variable';
+  padding:10px;
+  position:relative;
+}
+#Gtime input{
+  width:100px;
+  padding:8px 16px;
+}
+#Gtime select{
+  font-family: 'NanumSquareNeo-Variable';
+  padding:8px 16px;
+   width:100px;
+  height:42px;
+    margin-left:1px;
+}
+#endtime{
+    font-family: 'NanumSquareNeo-Variable';
+  margin-top:10px;
+}
+
+#Gtime label{
+    font-family: 'NanumSquareNeo-Variable';
+  display:inline-block;
+  padding-bottom:10px;
+}
+#endtime label{
+    font-family: 'NanumSquareNeo-Variable';
+  display:inline-block;
+  padding-bottom:10px;
+}
+#endtime .GiftyBorder, .GiftyBorder{
+  width:100px;
+  padding:8px 16px;
+}
+#endtime select{
+  font-family: 'NanumSquareNeo-Variable';
+  width:100px;
+  height:42px;
+  margin-left:1px;
+}
+#GMemo{
+    font-family: 'NanumSquareNeo-Variable';
+  margin-bottom:30px;
+}
+#GMemo input{
+  width:387px;
+  height:100px;
+}
+#GMemo label{
+  display:inline-block;
+  padding-bottom:10px;
+}
+.GiftyBorder{
+  border:1px #ccc solid;
+  border-radius:4px;
+}
+#giftycornSubmit{
+  border:1px #e9dfbe9e solid;
+  background-color:#481810;
+  color:#ffffff;
+    font-family: 'NanumSquareNeo-Variable';
+  padding:12px;
+  margin:10px;
+  text-align:center;
+  width:140px;
+  border-radius:8px;
+  font-size:18px;
+}
+#getstartTime{
+  font-size:18px;
+  font-weight:bold;
+  color:#481810;
+}
+#getEndTime{
+    font-size:18px;
+  font-weight:bold;
+  color:#481810;
+}
+#getGiftMemo{
+    font-size:18px;
+  font-weight:bold;
+  color:#481810;
+}
+#reallimitdate{
+    font-size:16px;
+  font-weight:bold;
+  color:#ca2020;
+  margin-bottom:-15px;
+}

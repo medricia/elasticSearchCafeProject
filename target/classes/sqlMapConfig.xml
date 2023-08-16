@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--   마이바티스가 읽어갈 설정파일 -->
+<configuration>
+  <settings>
+    <setting name="jdbcTypeForNull" value="VARCHAR" />
+  </settings>
+
+	<!-- Alias  -->
+	<typeAliases>
+		<typeAlias alias="user" type="com.projcafe.cafe.user.repository.ProjCafeUserVO"/>
+ 	 	<typeAlias alias="giftycornCafeList" type="com.projcafe.cafe.GiftycornCafeList.repository.ProjCafeGiftycornCafeListVO"/>
+ 		<typeAlias alias="giftycorn" type="com.projcafe.cafe.Giftycorn.repository.ProjCafeGiftycornVO"/>
+		<typeAlias alias="anno" type="com.projcafe.cafe.Anno.AnnoVO" />
+		<typeAlias alias="bookmark" type="com.projcafe.cafe.Bookmark.ProjCafeBookmarkVO"/>
+		<typeAlias alias="board" type="com.projcafe.cafe.board.repository.ProjCafeVO" />
+  		<typeAlias alias="menu" type="com.projcafe.cafe.menu.repository.ProjCafeMenuVO" />
+  		<typeAlias alias="review" type="com.projcafe.cafe.review.repository.ProjCafeReviewVO" />
+	</typeAliases>
+
+	<!-- sql Mapper 설정 -->
+	<mappers>
+		<mapper resource="mappings/ProjCafeBookmark-mapping.xml"/>
+		<mapper resource="mappings/ProjCafeUser-mapping.xml"/>
+   		<mapper resource="mappings/ProjCafeGiftycornCafeList-mapping.xml"/>
+		<mapper resource="mappings/ProjCafeGiftycorn-mapping.xml"/>
+		<mapper resource="mappings/ProjCafeanno-mapping.xml"/>
+		<mapper resource="mappings/cafeboard-mapping.xml"/>
+  		<mapper resource="mappings/cafemenu-mapping.xml"/>
+  		<mapper resource="mappings/cafereview-mapping.xml"/>
+	</mappers>
+</configuration>

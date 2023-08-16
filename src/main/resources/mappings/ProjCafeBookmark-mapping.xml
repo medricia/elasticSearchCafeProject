@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="ProjCafeBookmarkDTO">
+	<insert id="insertBookmark">
+		<![CDATA[
+		insert into PROJCAFEBOOKMARK(CAFE_ID,MEMBER_ID,CAFE_BOOKMARK_MEMO,cafe_page_plus_date) values (#{CAFE_ID},#{MEMBER_ID}, #{CAFE_BOOKMARK_MEMO},sysdate)
+		]]>
+	</insert>
+	
+	<update id="updateBookmark">
+		<![CDATA[
+		update PROJCAFEBOOKMARK set CAFE_BOOKMARK_MEMO = #{CAFE_BOOKMARK_MEMO} where CAFE_ID = #{CAFE_ID} AND MEMBER_ID = #{MEMBER_ID}
+		]]>
+	</update>
+	
+	<select id="getBookmarkList" resultType="bookmark">
+		<![CDATA[
+		select * from PROJCAFEBOOKMARK where MEMBER_ID = #{MEMBER_ID} order by CAFE_ID asc
+		]]>
+	</select>	
+	
+	<select id="getBookmarkInfo" resultType="bookmark">
+		<![CDATA[
+		select * from PROJCAFEBOOKMARK where CAFE_ID = #{CAFE_ID} AND MEMBER_ID = #{MEMBER_ID}
+		]]>
+	</select>	
+	
+	<delete id="deleteBookmark">
+		<![CDATA[
+		delete from PROJCAFEBOOKMARK where CAFE_ID = #{CAFE_ID} AND MEMBER_ID = #{MEMBER_ID}
+		]]>
+	</delete>
+	
+</mapper>

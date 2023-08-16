@@ -1,0 +1,102 @@
+@charset "UTF-8";
+       @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+    #header {
+        width: 1200px;
+        height: 150px;
+    }
+
+    .navi {
+        width: 80%;
+        height: 100px;
+    }
+
+    div.logo {
+        align-content: center;
+        display: inline-block;
+        position: relative;
+        right: 5px;
+        left: 5px;
+    }
+
+
+
+    nav ul li {
+        float: left;
+        list-style: none;
+    }
+
+    navi.li {
+        display: inline-block;
+    }
+
+    div.navi {
+        position: absolute;
+        top: 15px;
+    }
+
+    ul {
+        position: fixed;
+        right: 50px;
+    }
+
+
+
+    a,
+    a :link,
+    a:visited {
+        color: black;
+        font-weight: bold;
+        padding: 5px;
+        text-decoration: none;
+        text-transform: none;
+    }
+
+
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        font-weight: 400;
+        background-color: #f9f9f9;
+        min-width: 200px;
+    }
+
+    .dropdown-content a {
+        display: block;
+        text-decoration: none;
+        color: rgb(37, 37, 37);
+        font-size: 12px;
+        padding: 12px 20px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ececec
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .map{
+    	width: 40px; height: 40px; 
+    }

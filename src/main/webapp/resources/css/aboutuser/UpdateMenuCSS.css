@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#list{
+  font-family: 'NanumSquareNeo-Variable';
+  width:1000px;
+  margin:0 auto;
+}
+#list table{
+  width:1000px;
+}
+#list h3{
+  font-size:30px;
+}
+#thisiscenter{
+   margin-top:20px;
+
+}
+#checkCLN{
+   padding:10px 20px;
+  font-size:18px;
+  border:1px solid #ccc;
+  border-radius:5px;
+  margin-left:5px;
+}
+#changename{
+  display:inline-block;
+  font-size:30px;
+  font-weight:bold;
+  margin:0 20px;
+}
+.GTCname{
+  border:1px solid #ccc;
+  border-radius:4px;
+  padding:12px 10px;
+  font-size:17px;
+}
+
+.hrTable td{
+  padding-top:20px;
+  height:1px;
+  border-bottom:1px solid #ccc;
+}
+#list input[type=submit]{
+  font-family: 'NanumSquareNeo-Variable';
+  padding: 8px 20px;
+  margin-left:15px;
+  font-size:18px;
+  border:1px solid #aaa;
+  border-radius:5px;
+}
+#list input[type=submit]:active{
+  background-color:#aaa;
+}
+#menuNameTR td{
+  padding-top:20px;
+}
+#menuName{
+  font-size:18px;
+   display:inline-block;
+  margin-right:10px;
+}
+#menuprice{
+    font-size:18px;
+  display:inline-block;
+  margin-left:30px;
+  margin-right:10px;
+}
+
+.giftyProposal{
+    margin-top:20px;
+    font-family: 'NanumSquareNeo-Variable';
+  font-size:30px;
+  margin-bottom:20px;
+  color:#693c3c;
+}
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.yesgifty{
+   font-family: 'TheJamsil5Bold';
+  font-size:50px;
+  padding-top:20px;
+  color:#b55454;
+}
+#giftyProP{
+  width:1100px;
+  heigh:400px;
+  padding: 0 45px;
+}
+#giftyProPbox{
+  display:block;
+  padding:80px 40px;
+  vertical-align:center;
+  border: 5px #a28e8e dashed;
+  cursor:pointer
+}
+@media screen and (max-width: 2500px) {
+  #giftyProP {
+    position: absolute;
+  }
+}
+#giftyProPcontainer{
+  padding-left:390px;
+}

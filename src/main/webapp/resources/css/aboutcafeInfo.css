@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+	#cafe_name{font-family: 'omyu_pretty'; font-weight: bold; margin-left: 360px;}
+	#cafe_intro{font-family: 'omyu_pretty'; font-size: 20px;  margin-left: 360px;}
+	#number{margin: 0; padding: 0;}
+	#list{text-align: center; }
+	#cafe{text-align: center; color: #481810; font-weight: bold;}
+
+#cafe_image{
+
+	  position: relative;
+  width: 900px;
+  height: 300px;
+  overflow: hidden;
+	margin-left: 360px;
+	border-radius:10px;
+}
+.container {
+
+	max-width: initial;
+	width: 900px;
+  margin-top: -20%;
+	height:850px;
+	top:0
+}
+	#name{color: #481810; font-weight: bold;}
+	#location{color: #481810; font-weight: bold; }
+	#time{color: #481810; font-weight: bold;}
+	#call{color: #481810; font-weight: bold;}
+	#sns{color: #481810; font-weight: bold;}
+	#intro{color: #481810; font-weight: bold;}
+	hr {width: 900px; color:black; border: thin solid black; margin-left: 360px;}
+	hr + table{margin-top:0;}
+	.reviewContent{color: black; font-weight: bold;}
+	table { margin-left: 360px;
+  /* 가운데 정렬 */
+  
+}
+#tableName{ font-family: 'Pretendard-Regular'; font-weight: bold;}
+#tableContent{ font-family: 'Pretendard-Regular';}
+#reviewimage{margin-left: 1160px;}
+#bookmarkimage{}
+
+#admin_cafe{margin-left: 780px;}
+#cafe_menu_title{margin-left: 720px;}
+#cafe_menu{margin-left: 660px;}
+#cafe_price{margin-left: 660px;}
+#cafe_menu_submit{margin-left: 800px;}
+
+.mapdiv{
+  height:1120px;
+  border-left:1px solid #ccc;
+  position:absolute; right:0px; top: 100px; float: right;
+  width:380px;
+}#map{
+  height:350px; 
+}
+.art-text{
+	display:block;
+margin-left:-300px;
+	width:900px;
+border-top:1px #ccc solid;
+border-bottom:1px #ccc solid;
+    font-family: 'NanumSquareNeo-Variable';
+}
+.reviewListTitle{
+	display:block;
+	margin-left:50px;
+	font-size:25px;
+	font-weight:bold;
+	text-align:left;
+}
+.reviewContent{
+	font-size:20px;
+	font-weight: 100;
+	display:block;
+	margin-left:50px;
+	text-align:left;
+}
+.art-text a{
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+	font-weight:bold;
+	background-color:#ffe157;
+	padding:10px 20px;
+	border-radius:5px;
+	margin-right:30px;
+	color:#000
+}
+.hereiscafe table{
+	display:block;
+	margin-left:0px;
+	border-spacing: 0px 
+	
+}
+.hereiscafe .herecafeName{
+    font-family: 'NanumSquareNeo-Variable';
+	font-size:20px;
+	padding-top:10px;
+	padding-left:15px;
+}
+.hereiscafe .herecafeIntro{
+    font-family: 'NanumSquareNeo-Variable';
+	font-size:15px;
+	padding-top:10px;
+	padding-bottom:20px;
+	padding-left:15px;
+
+}
+.tg-0lax{
+	text-align:right;
+	border-bottom:1px #ccc solid;
+}
+.tg-0lax a{
+	 font-family: 'NanumSquareNeo-Variable';
+	display:inline-block;
+	background-color:#f1e1e1;
+	padding:5px 12px;
+	text-decoration:none;
+	border-radius:5px;
+	color:#494444;
+	margin-bottom:10px;
+
+}
+
+.giftyProposal{
+    font-family: 'NanumSquareNeo-Variable';
+  font-size:30px;
+  margin-bottom:20px;
+  color:#888;
+}@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.yesgifty{
+   font-family: 'TheJamsil5Bold';
+  font-size:50px;
+  padding-top:20px;
+  color:#ac9292;
+}
+#giftyProP{
+  width:1100px;
+  heigh:400px;
+  padding: 0 45px;
+}
+#giftyProPbox{
+  display:block;
+	width:900px;
+  padding:80px 40px;
+  vertical-align:center;
+  border: 5px #ccc dashed;
+  cursor:pointer;
+	margin-left:318px;
+	margin-bottom:100px;
+}

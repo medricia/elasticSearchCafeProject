@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CafeDAO">
+
+	<insert id="insertCafe">
+	<![CDATA[	
+		insert into ProjCafe(cafe_ID, cafe_Name, cafe_Location, cafe_OperateTime, cafe_PhoneNumber, cafe_SNS, cafe_Introduction,cafe_Image, GIFTYCORN_CLN, cafe_long, cafe_lat)
+		values((select nvl(max(cafe_ID), 0)+1 from ProjCafe),#{CAFE_NAME},#{CAFE_LOCATION},#{CAFE_OPERATETIME},REPLACE(#{CAFE_PHONENUMBER}, ',', '-'),#{CAFE_SNS},#{CAFE_INTRODUCTION},#{CAFE_IMAGE}, #{GIFTYCORN_CLN},'126.9843022','37.5696734')
+	]]>
+	</insert>
+	<select id="getCafeList" resultType="board">
+		
+		select * from ProjCafe order by cafe_ID desc
+		
+	</select>
+  
+ 	<select id="getCafe" resultType="board">
+ 	<![CDATA[
+ 		select * from ProjCafe where cafe_ID=#{CAFE_ID}
+ 	]]>
+ 	</select>	
+ 	
+ 	<select id="thisisCafeList" resultType="board">
+ 	<![CDATA[
+SELECT * FROM (SELECT rownum rnum, cafe_ID, cafe_Name, CAFE_INTRODUCTION, cafe_Location, cafe_Image FROM (SELECT * FROM ProjCafe where cafe_Name LIKE '%'||#{SEARCHKEYWORD}||'%' OR cafe_Location LIKE '%'||#{SEARCHKEYWORD}||'%' ORDER BY cafe_ID DESC))
+WHERE rnum >= #{STARTPAGE}
+  AND rnum <= #{ENDPAGE}
+		]]>
+ 	</select>	
+
+ 	<select id="thisisCafeListCount" resultType="int">
+  	<![CDATA[
+  		SELECT count(*) FROM ProjCafe WHERE cafe_Name LIKE '%'||#{SEARCHKEYWORD}||'%' OR cafe_Location LIKE '%'||#{SEARCHKEYWORD}||'%'
+	]]>
+	</select>
+
+
+ 	<update id="updateCafe">
+ 	<![CDATA[
+ 		update projCafe set cafe_Name = #{CAFE_NAME}, CAFE_IMAGE = #{CAFE_IMAGE}, CAFE_LOCATION = #{CAFE_LOCATION}, CAFE_OPERATETIME = #{CAFE_OPERATETIME}, CAFE_PHONENUMBER = TO_CHAR(REPLACE(#{CAFE_PHONENUMBER}, ',', '-')), CAFE_SNS = #{CAFE_SNS}, CAFE_INTRODUCTION = #{CAFE_INTRODUCTION}  WHERE CAFE_ID = #{CAFE_ID}
+ 	]]>
+ 	</update>
+ 
+ 
+ 	<delete id="deleteCafe">
+ 	<![CDATA[
+ 		delete from projCafe where cafe_ID = #{CAFE_ID}
+ 	]]>
+ 	</delete>
+ 	
+  	<delete id="deleteCafeMenu">
+ 	<![CDATA[
+ 		delete from ProjCafeMenu where cafe_ID = (select cafe_ID from ProjCafe where cafe_ID = #{CAFE_ID})
+ 	]]>
+ 	</delete>
+ 	
+	<delete id="deleteBookmark">
+		<![CDATA[
+		delete from PROJCAFEBOOKMARK where CAFE_ID = #{CAFE_ID}
+		]]>
+	</delete>
+	
+ 	<delete id="deleteCafeRImage">
+ 	<![CDATA[
+		delete from ProjCafeRImage where cafe_Review_Number = (select cafe_Review_Number from ProjCafeReviewBoard where cafe_ID = (select cafe_ID from ProjCafe where cafe_ID = #{CAFE_ID}))
+ 	]]>
+ 	</delete>	
+ 	
+ 	<delete id="deleteCafeReview">
+ 	<![CDATA[
+ 		delete from ProjCafeReviewBoard where cafe_ID = (select cafe_ID from ProjCafe where cafe_ID = #{CAFE_ID})
+ 	]]>
+ 	</delete>
+</mapper>
+
+<!-- sql -->

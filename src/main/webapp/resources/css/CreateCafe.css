@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#imgContainer{
+  display:none;
+  width:500px;
+  height:500px;
+  background-color:#aaa;
+  margin:0 auto;
+  border-radius:10px;
+  overflow: hidden;
+}
+#MakeCafeContainer{
+  font-family: 'NanumSquareNeo-Variable';
+  margin-top:30px;
+  margin-bottom:50px;
+}
+#MakeCafeContainer table{
+width:1100px;
+margin:0 auto;
+  background-color:#ECE6E0;
+  border-collapse : collapse;
+  border-radius:10px;
+  text-align:center;
+}
+.newCafe{
+  font-size:30px;
+  padding-top:30px;
+}
+.newCafe span{
+  display:inline-block;
+  margin-top:20px;
+  margin-bottom:15px;
+}
+
+.makehr td{
+  border-bottom:1px solid #aaa;
+}
+.GiftyBorder{
+    font-family: 'NanumSquareNeo-Variable';
+  padding:10px 20px;
+  width:508px;
+  font-size:20px;
+  margin-top:30px;
+  margin-bottom:20px;
+}
+#uploadPic{
+  width:500px;
+  margin:0 auto;
+  padding:200px 0;
+  border:3px dashed #aaa;
+  border-radius:10px;
+}
+.upload{
+  padding-bottom:50px;
+}
+.tg .inputtext{
+    font-family: 'NanumSquareNeo-Variable';
+  padding:15px;
+  width:800px;
+  font-size:18px;
+  margin-bottom:30px;
+  border:1px solid #aaa;
+  border-radius:4px;
+  
+}
+.number{
+  padding:15px;
+  width:239.7px;
+  font-size:20px;
+  margin-bottom:30px;
+    border:1px solid #aaa;
+  border-radius:4px;
+
+}
+.front .infotext{
+  display:block;
+  text-align:left;
+  font-size:20px;
+  padding-right:718px;
+  margin-top:10px;
+  margin-bottom:5px;
+}
+
+.bar{
+  display:inline-block;
+  margin:0 10px;
+  font-size:20px;
+  font-weight:bold;
+}
+
+#intro{
+  height:300px;
+}
+#image{
+      font-family: 'NanumSquareNeo-Variable';
+  font-size:20px;
+  display:none;
+}
+
+.tg input[type=submit]{
+  padding:8px 20px;
+  font-size:20px;
+  border:1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom:38px;
+  background-color:#481810;
+  color:#fff;
+  font-weight:bold;
+}

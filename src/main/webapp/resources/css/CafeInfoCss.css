@@ -1,0 +1,236 @@
+@charset "UTF-8";
+	#number{margin: 0; padding: 0;}
+	
+	#cafe{text-align: center; color: #481810; font-weight: bold;}
+
+	#name{color: #481810; font-weight: bold;}
+	.location{color: gray; font-weight: bold; text-align:center; }
+	#time{color: #481810; font-weight: bold;}
+	#call{color: #481810; font-weight: bold;}
+	#sns{color: #481810; font-weight: bold;}
+	#intro{color: #481810; font-weight: bold;}
+	hr{width: 500px; color:black; border: thin solid black; margin:0 auto;}
+	
+.container {
+  width: auto;
+  height: 200px;
+  overflow: hidden;  
+}
+.news{
+	margin:0 auto;
+}
+#image{text-align: center;}
+#cafeName{color: navy; text-align: center; }
+#number{color: black; text-align: center; margin: 0; padding: 0;}
+#time{color: black; text-align: center; margin: 0; padding: 0;}
+#sns{color: blue; text-align: center; margin: 0; padding: 0;}
+p{color: black; text-align: center; text-shadow: blue;}
+#admin{text-align: center;}
+
+span{color: black;}
+
+<%-- 0503 수정 파트 --%>
+#explain{margin:0 auto;}
+<%--#location{text-align: left;}--%>
+#list{text-align: center;}
+
+<%-- 수정파트2 --%>
+.article-box{
+	height:26vh;
+	width:100vw;
+	display:flex;
+	flex-direction:column;
+	flax-wrap:wrap;
+	flex: 1 0 0;
+	justify-content:space-around;
+	align-items: center;
+}
+
+article{
+	background-color: white;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: center;
+	width: 1000px;
+	height: 25vh;
+}
+article table{
+	padding:40px;
+	width:1000px;
+	height:220px;
+	border: 1px solid #481810;
+}
+
+.art-imag > img{
+	width :15vw;
+	height: 28vh;
+	object-fit:cover;
+}
+
+.art-text{
+	margin-left: 3vw;
+}
+
+.art-name{font-size: 32px; }
+
+.menuTitle{font-size: 23px; font-weight: bold; color: #481810;}
+
+.cafeMenu{word-spacing: 40px;}
+/* Material style */
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#getCafeGiftycorn{
+  font-family: 'NanumSquareNeo-Variable';
+  position: fixed;
+  bottom: 10px;
+  opacity:100%;
+  right: 10px;
+  z-index:100;
+}
+#giftybackground > #getCafeGiftycorn{
+  opacity:1;  
+}
+#giftybackground{
+  width:100%;
+  height:100%;
+    top: 0px;
+  left:0px;
+  background-color: rgba(255, 255, 255, 0.7); 
+  position: fixed;
+  z-index:10;
+}
+#ThisCafeGiftycorn {
+  font-family: 'NanumSquareNeo-Variable';
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 8px;
+  font-size: 22px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+  background:#481810;
+}
+
+#ThisCafeGiftycorn{
+  position: relative;
+  overflow: hidden;
+}
+
+#ThisCafeGiftycorn:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+#ThisCafeGiftycorn:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+#CafeGiftycorn{
+  bottom: 10px;
+  height:500px;
+  right: 10px;
+  border:1px #000 solid;
+  border-top:none;
+  border-radius:0 0 8px 8px;
+  background-color: rgba(255, 255, 255, 0.7); 
+  display: none;
+  overflow: auto;
+ -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+#CafeGiftycorn::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+.realGiftycorn{
+  padding: 30px 50px;
+}
+.imageCenter{
+  text-align:center;
+}
+.giftycornImg{
+  width:300px;
+}
+#giftydate{
+  font-size:17px;
+  font-weight:bold;
+  padding:15px;
+  margin: 0 15px;
+}
+
+#eraser{
+  width:1000px;
+  height:1000px;
+  background-color:#333;
+}
+
+#center{
+  font-family: 'NanumSquareNeo-Variable';
+position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:1080px;
+  background:rgba(255, 255, 255, 0.5);
+  z-index:500;
+  display:none;
+}
+#centerimage{
+  width:600px;
+  padding:100px 50px;
+  margin: 100px auto;
+  border-radius:10px;
+  border:3px #481810 solid;
+  background:rgba(236,230,224, 0.5);
+}
+
+#centerimage #IMG{
+  display:block;
+  margin: 0 auto;
+  width:500px;
+}
+#giftyCafeName{
+  font-size:30px;
+  font-weight:bold;
+  text-align:center;
+  margin:0 70px;
+  margin-bottom:30px;
+}
+#centerimage .giftymemo{
+  display:block;
+  margin: 40px 50px;
+  margin-bottom:0px;
+}
+#reviewandmap{
+	text-align:center;
+	margin:0 auto;
+	width:1200px;
+}

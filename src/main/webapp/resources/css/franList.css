@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+#giftyCafeListContainer{
+  font-family: 'NanumSquareNeo-Variable';
+  width:1000px;
+  margin:0 auto;
+}
+#giftyCafeListContainer #cafe{
+  font-size:30px;
+  margin-left:20px;
+  margin-top:50px;
+  font-weight:bold;
+  margin-bottom:23px;
+}
+#list{
+  font-size:23px;
+}
+#list table{
+  border-collapse : collapse;
+  width:1000px;
+  margin: 0 auto;
+}
+#list table .CLNumberTD{
+  width:60px;
+  height:60px;
+  padding-left:20px;
+}
+#list table tr td{
+  border-bottom:1px solid #ccc;
+}
+.CLNumber{
+  
+  font-weight:bold;
+  
+}
+.ListFN{
+ padding-left:20px; 
+}
+
+#buttonDiv{
+  margin-top:30px;
+text-align:center;  
+}
+#buttonDiv a{
+  margin:0 10px;
+  background-color:#784840;
+  padding:10px 20px;
+  font-size:18px;
+  border-radius:10px;
+  border:1px solid #e5e4dc;
+  color:#fff;
+  text-decoration:none;
+}
+#buttonDiv a:active{
+  background-color:#481810;
+  color:#fff;
+}

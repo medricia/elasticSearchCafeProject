@@ -1,0 +1,369 @@
+@charset "UTF-8";
+
+*{
+	width: 1120px;
+	margin: 0 auto;
+}
+input:focus{
+	outline:none;
+}
+
+/* Header */
+.Header {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.Headerul {
+  list-style-type: none;
+  text-align:left;
+    font-family: 'Pretendard-Regular';
+
+}
+
+.Headerul a{
+  text-decoration-line:none;
+  color: #ff8e9c;
+}
+.Headerul a:hover{
+  color: rgb(135, 159, 222);
+}
+.Headerul li{
+  display:inline;
+}
+.goLeft{
+  padding-left:10px;
+}
+.goRight{
+  padding-left:50%;
+}
+
+.goMainPage{
+   font-family: 'KorailRoundGothicBold';
+  font-size: 1.5em;
+}
+
+.headerListTable {
+  border-collapse: collapse;
+  border-top: 1px solid #fdcfcf;
+  width: 100%;
+  background-color:#FFEEEE; 
+     font-family: 'S-CoreDream-3Light';
+}
+.headerListTable th {
+  border-bottom: 1px solid #fdcfcf;
+  text-align: center;
+  padding: 12px;
+ color:#8e3737;
+}
+.headerListTable th:hover{
+background:#b08989;
+cursor:pointer;
+color:#fff;
+}
+
+.headerListTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.headerListTable td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+/* BoardList */
+.th_board{
+	font-family: 'S-CoreDream-3Light';
+	font-size: 30px; 
+	padding-left:40px;
+	padding-top: 30px;
+	}
+.th_count{
+	font-family: 'S-CoreDream-3Light';
+	padding-top: 40px;
+}
+.noDecoration{
+	text-decoration: none;
+}
+.li_header{
+     font-family: 'S-CoreDream-3Light';
+	font-weight: bold;
+}
+.li_board {
+	font-family: 'S-CoreDream-3Light';
+	border-top: 1px solid #ac5d5d;
+	display: table;
+	width: 100%;
+}
+.li_board ul {
+	list-style: none;
+	margin-bottom: 0;
+	clear : both;
+	display: table-row-group;
+	padding-left: 0;
+}
+.li_board ul li {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: #eed3d3;
+}
+.li_board ul li.category {
+	width :15%;
+}
+.li_board ul li.prod_name {
+	width         : 180px;
+	text-align: left;
+}
+.li_board ul li.prod_name a {
+	font-size: 12px;
+	letter-spacing: -1px;
+}
+.li_board ul li.no {
+	width: 5%;
+}
+.li_board ul li.read,.li_board ul li.name,.li_board ul li.time {
+	width:10%
+}
+.li_board ul li.date {
+	width:12%;
+}
+.li_board ul.li_body li.tit,.li_board ul li.name {
+	text-align: left;
+}
+.li_board ul li.tit {
+	width:auto;
+}
+.li_board ul li.tit .tit_ico i {
+	margin-right: 5px;
+}
+.tit_ico{
+	padding-left:50px;
+}
+.detail{
+	margin-top: 30px;
+	margin-left: auto;
+}
+.boardSubject{
+	padding-left:5px;
+
+}
+.boardSubjectColor{
+	color: black;
+}
+.boardSubjectColor:visited{
+	color: #999;
+}
+.backstep{
+	margin-right: 10px;
+	text-decoration: none;
+    font-family: 'KIMM_Bold';
+	color:#ac5d5d;
+}
+.highlight{
+	font-weight:bolder;
+	color:rgb(184, 52, 14);
+	padding: 0 10px;
+}
+.boardNumberContainer{
+	font-family: 'EF_watermelonSalad';
+	color:#ac5d5d;
+}
+.boardNumber{
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+.frontstep{
+	margin-left: 10px;
+	text-decoration: none;
+    font-family: 'KIMM_Bold';
+	color:#ac5d5d;
+}
+.addBoard{
+    font-family: 'Pretendard-Regular';
+	background: #fdcfcf;
+	font-size:18px;
+	border-radius: 6px;
+	text-decoration: none;
+	padding: 10px 12px;
+	margin-left: 93%;
+	color:#8e3737;
+}
+
+/* AddBoard  */
+.submit{
+	font-family: 'Pretendard-Regular';
+	background: #fdcfcf;
+	font-size:18px;
+	width:70px;
+	margin-top: 20px;
+	margin-right:20px;
+	border-radius: 6px;
+	text-decoration: none;
+	padding: 10px 12px;
+	color:#8e3737;
+	border: none;
+	display:inline;
+}
+.goBack{
+	font-family: 'Pretendard-Regular';
+	background: #e5e5e5;
+	font-size:18px;
+	width:70px;
+	margin-top: 20px;
+	margin-left:20px;
+	border-radius: 6px;
+	text-decoration: none;
+	padding: 10px 12px;
+	color:#7d7d7d;
+	border: none;
+	
+}
+
+.borderBottom{
+	border-top: none;
+	border-left:none;
+	border-right:none;
+	border-bottom: 1px solid gray;
+	 
+}
+#block{
+	width: 100%;
+	height: 50px;
+	background-color: gray;
+}
+
+.borderName{
+	width:300px;height:20px;font-size:15px; font-family: 'Pretendard-Regular'; border-radius:0; box-shadow:none;
+}
+.borderSubject{
+	width:1100px;height:40px; font-size:30px; padding-left:10px; margin-top: 10px; font-family: 'Pretendard-Regular'; border-radius:0; box-shadow:none;
+}
+.borderFileUpload{
+	margin-bottom:15px; padding-left:10px; font-size:14px; font-family: 'Pretendard-Regular'; border:none; box-shadow:none;
+}
+.boardContentUpdate{
+	
+	width:1108px; height: 565px; border: 1px solid #ccc; border-radius: 6px;
+}
+.boardContentUpdate:focus {
+  outline: none;
+}
+.noneDis{
+	all:unset;	
+}
+
+.tg-0pky{
+	height:30px;
+}
+.buttons{
+	text-align: center;
+	vertical-align: middle;
+	width:100px;
+}
+.spacing{
+	margin: 0 10px;
+}
+.buttons:hover{
+	cursor:pointer;
+	
+}
+
+.classification{
+	font-size: 12px;
+	padding-right: 10px;
+	
+}
+
+.detail{
+	font-size: 15px;
+	
+}
+/* BoardView */
+.BoardName{
+	font-family: 'S-CoreDream-3Light';
+	padding-left: 20px;
+	padding-top: 20px;
+}
+.BoardSubject{
+	font-family: 'S-CoreDream-3Light';
+	padding-left: 20px;
+	font-size:30px;
+	padding:20px;
+	padding-top: 30px;
+}
+
+.textareaview{
+	font-family: 'Chosunilbo_myungjo';
+	width: 1081px;
+	padding-left: 20px;
+	margin:10px;
+	margin-top: 0;
+	border:none;
+	font-size: 20px;
+	outline: none;
+	background-color: transparent;
+	line-height: 160%;
+	resize:vertical;
+	resize: none;
+}
+.BoardFile{
+	padding-left: 20px;
+	font-family: 'S-CoreDream-3Light';
+	font-size:20px;
+	padding-top:17px;
+	text-decoration:none;
+	vertical-align: middle;
+	color:#333;
+		
+}
+.BoardFileTD{
+	padding-top:17px;
+	vertical-align: middle;
+	height:10px;
+}
+.downloadImg{
+	width: 25px;
+	padding-left:10px;
+	vertical-align: sub;
+}
+
+/* footer */
+.footer{
+  height: 90px;
+  bottom: -100px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+footer {
+  bottom: 0px;
+  border-top: 1px solid #c4c4c4;
+  padding-top: 15px;
+  color: #808080;
+  font-size: 11px;
+  line-height: 160%;
+}
+
+footer a {
+  display: inline;
+  margin: 0 20px 10px 20px;
+  color: #808080; font-size: 11px;
+}
+
+footer a:visited {
+  color: #808080;
+}
+
+footer p {
+  margin-top: 0; margin-bottom: 0;   
+}
+
+footer p span {
+  display: inline-block;
+  margin-left: 20px;
+}

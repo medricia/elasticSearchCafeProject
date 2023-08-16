@@ -1,0 +1,405 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#Usercontainer{
+font-family: 'NanumSquareNeo-Variable';
+}
+#aboutUserInfo{
+  border-collapse:collapse;
+}
+@media screen and (max-width: 1000px) {
+  #aboutUserInfo{
+  width:1000px;
+  }
+}
+@media screen and (max-width: 1267px) {
+  #UserTable {
+    position: fixed;
+  }
+}
+
+
+#aboutUserInfo .aboutgiftycorn, .myinfo{
+  padding:10px;
+}
+#aboutUserInfo .aboutgiftycorn{
+  background-color:#D8B838;
+	vertical-align:center;
+  height:150px;
+
+  padding-left:30px;
+}
+#aboutUserInfo .myinfo{
+  background-color:#481810;
+  color:#fff;
+  font-size:30px;
+	text-align:center;
+  width:180px;
+  table-layout: fixed;
+  height:150px;
+}
+#GiftycornNumber{
+  font-size:35px;
+  color:#fff;
+}
+#GiftycornNumber span{
+  font-size: 45px;
+  font-weight:bold;
+  padding: 0 10px;
+}
+#GiftycornInfo th, td, tr{
+  padding:10px;
+}
+#Usercontainer input[type=radio] {
+	display: none;
+}
+#tab-1:checked ~ .tab label:nth-child(1),
+#tab-2:checked ~ .tab label:nth-child(2),
+#tab-3:checked ~ .tab label:nth-child(3),
+#tab-4:checked ~ .tab label:nth-child(4) {
+	background-color: #ECE6E0;
+  box-shadow: none;
+}
+.content > div {
+	display: none;
+}
+#tab-1:checked ~ .content div:nth-child(1),
+#tab-2:checked ~ .content div:nth-child(2),
+#tab-3:checked ~ .content div:nth-child(3),
+#tab-4:checked ~ .content div:nth-child(4)  {
+	display: block;
+}
+.tab {
+  overflow: hidden;
+}
+.tab label {
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 5px 10px;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.content {
+  background-color: #fff;
+  min-height: 250px;
+}
+.content > .content-dis{
+   padding: 30px;
+   line-height: 1.5;
+   font-size: 17px;
+}
+#onlyUseGiftycornList{
+  margin-top:-23px;
+}
+.clickMouse{
+	cursor:pointer;
+  margin-top:-15px;
+}
+#giftycornList{
+  display:inline-block;
+  margin-left:30px;
+  margin-top:30px;
+  margin-bottom:10px;
+  
+  font-size:20px;
+  font-weight:bold;
+}
+#cafeList{
+  margin-left:30px;
+}
+#aboutInfo{
+  display:inline-block;
+  margin-left:30px;
+  margin-bottom:30px;
+  color:#555;
+}
+.getInfo{
+  vertical-align:top;
+}
+#GiftycornInfo .giftycornImage{
+  width:100px;
+  height:100px;
+  padding-left:30px;
+}
+#giftycornIMG{
+  width:100px;
+  height:100px;
+}
+#GiftycornInfo .giftycornDate{
+  display:inline-block;
+  margin-left:10px;
+  font-size: 20px;
+  font-weight:bold;
+}
+#GiftycornInfo .giftycornMeno{
+  display:inline-block;
+  margin-left:10px;
+}
+.MyInfo{
+  background-color:#ECE6E0;
+  vertical-align:top;
+  padding: 20px;
+  height:1000px;
+}
+#MyInfoLIST span{
+  display:inline-block;
+  padding: 13px 0;
+  font-size:17px;
+  font-weight:bold;
+}
+#MyInfoLIST a{
+  display:inline-block;
+  padding-bottom: 8px;
+  text-decoration:none;
+  color:#481810;
+}
+#MyInfoLIST a:visited{
+  color:#481810;
+}
+.Infobottom{
+  margin-bottom:10px;
+}
+#pwcheck{
+  width:900px;
+  text-align:center;
+}
+#pwcheck p{
+  font-size:25px;
+  color:#481810;
+}
+#InputPW{
+  padding:10px;
+  width:200px;
+  border-radius:4px;
+  margin-left:10px;
+  margin-top:10px;
+  border:1px solid #CCC6C0;
+}
+#labelPW{
+  font-size:18px;
+}
+#PWsubmit{
+font-family: 'NanumSquareNeo-Variable';
+  margin-top:10px;
+  margin-left:8px;
+  border-radius:4px;
+  padding: 8px 14px;
+  font-size:15px;
+  background-color:#481810;
+  color:#fff;
+  border:1px solid #CCC6C0;
+}
+#RealUserInfo{
+  font-size:18px;
+  border-collapse : collapse;
+  table-layout: fixed;
+  word-break:break-all;
+  margin-left:40px;
+  margin-top:40px;
+}
+#RealUserInfo tbody tr{
+  border-top: 1px #CCC6C0 solid;
+    border-bottom: 1px #CCC6C0 solid;
+}
+#UsertableHeader{
+  font-size:29px;
+  font-weight:bold;
+  
+}
+#RealUserInfo .userhr hr{
+  height:1px;
+  font-size:0px;
+  background-color:#481810;
+}
+.usertablefront{
+  background-color: #ECE6E0;
+  font-size:20px;
+  padding:15px 20px;
+    width:150px;
+  
+}
+#RealUserInfo tr:has(.usertablefront){
+  border-right:3px #ece6e0 solid;
+}
+#RealUserInfo tr:has(.usertableback){
+  border-right:3px #ece6e0 solid;
+}
+
+#PWFailchange{
+  opacity:0%;
+}
+
+#RealUserInfo tbody .usertableback{
+  width:1000px;
+}
+#DIVUserInfo{
+	padding-left:20px;
+}
+#reviewList{
+  text-decoration:none;
+  color:#000;
+}
+#reviewButton{
+  margin-top:-27px;
+}
+.reviewName{
+  padding-left:30px;
+}
+.getHR{
+  width:1800px;
+}
+.getwidth{
+  width:1800px;
+}
+.bookmarksavetime{
+  font-size:15px;
+  color:#777;
+  padding-bottom:0px;
+  margin:0px;
+}
+#BMbutton{
+  height:10px;
+  vertical-align:center;
+  text-align:left;
+  width:300px;
+}
+.bookmarkbutton{
+  vertical-align:center;
+  text-decoration:none;
+  padding:15px 20px;
+  display:inline-block;
+  color:#fff;
+  border-radius:10px;
+  font-size:20px;
+  margin-top:25px;
+  background-color:#481810;
+  margin-left:40px;
+}
+.bookmarkbutton:hover{
+  
+  color:#fff;
+}
+.bookmarkUpdate{
+	cursor:pointer
+}
+#GiftyButton{
+  margin-top:-49px;
+}
+.inlineblock{
+  display:inline-block;
+}
+#bookmarkDelete{
+  border-radius:10px;
+  padding:15px 20px;
+  font-size:20px;
+  margin-left:20px;
+  margin-right:0px;
+  background-color: #ECE6E0;
+  border:1px solid #CCC6C0;
+font-family: 'NanumSquareNeo-Variable';
+}
+.getbookmark{
+  width:500px;
+}
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+.giftyProposal{
+    font-family: 'NanumSquareNeo-Variable';
+  font-size:30px;
+  margin-bottom:20px;
+  color:#888;
+}
+.yesgifty{
+   font-family: 'TheJamsil5Bold';
+  font-size:50px;
+  padding-top:20px;
+  color:#ac9292;
+}
+#giftyProP{
+  width:900px;
+  heigh:400px;
+  padding: 0 45px;
+}
+#giftyProPbox{
+  display:block;
+  padding:80px 40px;
+  vertical-align:center;
+  border: 5px #ccc dashed;
+  cursor:pointer
+}
+@media screen and (max-width: 2500px) {
+  #giftyProP {
+    position: absolute;
+  }
+}
+#MyMenuContainer {
+
+  justify-content: center;
+  align-items: center;
+}
+
+#margin1400px {
+  margin-left:360px;
+  width: 1100px;
+}
+
+#rightMenu {
+  text-align:center;
+  position: absolute;
+  left: calc(50% + 530px);
+   top: 50%;
+  transform: translateY(-50%);
+}
+
+#GoMenu{
+  text-align:left;
+  border: 3px solid #B89898;
+  border-radius:10px;
+  width:180px;
+  height:260px;
+  padding-top:32px;
+  padding-left:23px;
+}
+#GoMenu a{
+    font-family: 'NanumSquareNeo-Variable';
+  text-decoration:none;
+  font-weight: bold;
+  color:#9e6454;
+  font-size:16px;
+  margin-bottom:14px;
+  border-bottom:1.5px dashed #D8A8A8;
+  display:inline-block;  
+}
+#GoMenu a:hover{
+  color:#eb8118;
+}
+#Gotop{
+    font-family: 'NanumSquareNeo-Variable';
+  font-weight:bold;
+  margin-top:10px;
+  font-size:20px;
+  display:inline-block;
+  text-decoration:none;
+  color:#683848;
+}

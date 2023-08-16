@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+#bookmarkbackground{
+	display:none;
+    width:100%;
+  height:100%;
+  background-color:rgb(255 255 255 / 42%);
+   position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	z-index:1000;
+}
+#bookmarkcontainer{
+    font-family: 'NanumSquareNeo-Variable';
+ width:750px;
+  margin:0 auto;
+	margin-top:300px;
+	text-align:center;
+  background-color:rgb(248 234 214);
+  border-radius:10px;
+	border:2px solid #ce9e9e;
+}
+#cafe{
+  padding-top:25px;
+	padding-bottom:10px;
+  font-size: 30px;
+  color:#444;
+  
+}
+#bookmarksubmit{
+    font-family: 'NanumSquareNeo-Variable';
+  padding:10px 20px;
+  font-size:16px;
+  margin-top:12px;
+  margin-bottom:20px;
+  border-radius:10px;
+	background-color:#825047;
+	color:#fff;
+  border:1px #ccc solid;
+}
+
+#bookmarkmemo{
+    font-family: 'NanumSquareNeo-Variable';
+width:600px;
+  padding:10px;
+  height:200px;
+  font-size:20px;
+  border-radius:5px;
+  resize: none;
+  border:1px solid #ccc;
+  background-color:#fff;
+}
+#OnlybookmarkButton{
+  margin-top:-80px;
+}

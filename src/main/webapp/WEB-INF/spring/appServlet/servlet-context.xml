@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<context:component-scan base-package="com.projcafe.cafe" />
+	
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"><!-- 마지막 이름이 Resolver로 끝난다. class 이름이 이렇게 끝나면 대부분 id가 고정되어있는 경우가 많다. 즉, id를 신경써서 처리해줘야한다. -->
+		<beans:property name="maxUploadSize" value="-1"></beans:property><!-- property 의 규약에 따라 위의 클래스에 인스턴스를 생성하며 property name의 getter/setter 메소드를 호출한다. 기본 자료형일 경우 value, 참조 자료형일 경우 ref, 첨부파일의 크기를 100000kb 만큼 제한, default는 -1의 값으로 설정되어있는데, 첨부하는 파일 크키에 제한을 두지 않겠다는 의미이다. 대용량 파일은 서버에 과부하가 걸리기 때문에 사이즈 제한을 두는게 일반적이다.-->
+	</beans:bean>
+	
+</beans:beans>
